@@ -50,7 +50,7 @@ void calcular_producto(int id_producto) {
 
         pthread_mutex_unlock(&candado); // Libera el mutex
 
-        usleep(1000000); // Simula un segundo
+        sleep(1); // Simula un segundo
 
         pthread_mutex_lock(&candado);
         printf("Calculo hilo %d para mes %d terminado\n", id_producto, mes + 1);
